@@ -1,0 +1,34 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+ system("color 5a");
+ char metin[100];
+ char krk;
+ int kac;
+ printf("Buyuk harfle yaziniz...\n");
+ printf("Bir cumle giriniz...\n");
+ printf("Kac karakter otesi sifrelemek istersiniz...");
+ scanf("%d",&kac);
+ for(int i=0;i<strlen(metin);i++)
+ {
+  if(metin[i]==' ')
+  {
+   printf(" ");
+   continue;
+  }   
+  else
+  {
+   krk = (char) (((int) metin[i]-65+kac)%26+65);
+   printf("%c",krk);
+  }
+ }
+ printf("\n");
+ system("\npause");
+ return 0;
+ 
+}
+
+
